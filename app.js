@@ -200,57 +200,6 @@ async.series([
         return routeCb()
       }
     }, cb)
-    //
-    // Object.keys(routes).forEach((key) =>
-    // {
-    //   /* find request type. Default = get */
-    //   let _path, _method
-    //   if (key.indexOf(' ') < 0)
-    //   {
-    //     _path = key
-    //     _method = 'get'
-    //   }
-    //   else
-    //   {
-    //     key = key.split(' ')
-    //     _method = key[0]
-    //     _path = key[1]
-    //   }
-    //
-    //   /* make sure route is set properly. Stop if it doesn't specify either controler file or route function */
-    //   if (routes[_path].indexOf('.') < 0) return
-    //   let _routeContr = routes[_path].split('.')
-    //
-    //   Object.keys(controllers).forEach((contrKey) =>
-    //   {
-    //     if (!controllers[_routeContr[0]]) return
-    //     Object.keys(controllers[contrKey]).forEach((funcKey) =>
-    //     {
-    //       if (!controllers[contrKey][_routeContr[1]]) return
-    //       let routeControllerFunc = controllers[contrKey][_routeContr[1]]
-    //
-    //       /* assign correct request type */
-    //       switch(_method)
-    //       {
-    //         case 'get':
-    //         {
-    //           app.get(_path, routeControllerFunc)
-    //           break;
-    //         }
-    //         case 'post':
-    //         {
-    //           app.post(_path, routeControllerFunc)
-    //           break;
-    //         }
-    //         case 'put':
-    //         {
-    //           app.put(_path, routeControllerFunc)
-    //           break;
-    //         }
-    //       }
-    //     })
-    //   })
-    // })
   }
 ], () =>
 {
