@@ -1,0 +1,15 @@
+<% if (post.link){ %>
+  <h1 itemprop="name">
+    <a href="/<%- post.seo_name %>" target="_blank" itemprop="url"><%= post.title || '(no title)' %></a>
+  </h1>
+<% } else { %>
+  <% if (index){ %>
+    <h1 itemprop="name">
+      <a href="/<%- post.seo_name %>"><%= post.title || '(no title)' %></a>
+    </h1>
+  <% } else { %>
+    <h1 itemprop="name">
+      <%= post.title || '(no title)' %>
+    </h1>
+  <% } %>
+<% } %>

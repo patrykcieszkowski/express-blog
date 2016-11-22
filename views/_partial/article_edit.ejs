@@ -1,0 +1,36 @@
+<article class="article>" itemscope itemprop="blogPost">
+  <form id="edit_article">
+    <input value="<%= post._id %>" name="id" type="hidden">
+    <header class="article-header">
+      <h5>Title:</h5>
+      <input type="text" class="form-control" placeholder="Title" name="title" value="<%= post.title %>">
+      <% var tagList = "" %>
+      <% if (post.tag && post.tag.length) { %>
+        <% for (var i = 0; i < post.tag.length; i++) { tagList += post.tag[i]+', ' } %>
+      <% } %>
+      <h5>Tags:</h5>
+      <input type="text" class="form-control" placeholder="Tags" name="tags" value="<%= tagList %>">
+
+    </header>
+    <div class="article-inner">
+      <div class="article-entry" itemprop="articleBody">
+        <h4>Short:</h4>
+        <textarea class="form-control" name="body_short" style="height: 25vh"><%= post.body_short %></textarea>
+        <h4>Full:</h4>
+        <textarea class="form-control" name="body" style="height: 50vh"><%= post.body %></textarea>
+      </div>
+    </div>
+    <footer class="article-footer">
+      <%- include post/date %>
+      <span class="spacer">&middot;</span>
+      <% if (post.author){ %>
+        <% if (post.author.first_name && post.author.last_name) { %>
+          <div class="article-author"><%= post.author.first_name %> '<%= post.author.username %>' <%= post.author.last_name %></div>
+        <% } else {%>
+          <div class="article-author"><%= post.author.username %></div>
+        <% }%>
+      <% } %>
+      <button class="btn btn-default" type="submit" style="float: right">Save</button>
+    </footer>
+  </form>
+</article>

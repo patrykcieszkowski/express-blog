@@ -1,0 +1,4 @@
+<% if (page.scripts) {
+  for (var i = 0; i < page.scripts.length; i++) { %>
+    <script type="text/javascript" src="<%= page.scripts[i] %>"></script>
+<% } } %>

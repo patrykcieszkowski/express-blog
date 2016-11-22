@@ -1,0 +1,23 @@
+<%- include _partial/head %>
+<body>
+  <%- include _partial/masthead %>
+  <div class="container">
+    <% if (page.header) { %>
+      <% var details = page.header %>
+      <%- include _partial/header %>
+    <% } %>
+    <div class="row">
+      <% if (config.fullscreen) { %>
+        <div class="col-sm-12 blog-main">
+          <%- body %>
+        </div>
+      <% } else { %>
+        <div class="col-sm-12 blog-main">
+          <%- body %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+  <%- include _partial/inline-scripts %>
+</body>
+</html>

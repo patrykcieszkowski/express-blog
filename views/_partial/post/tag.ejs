@@ -1,0 +1,8 @@
+<% if (post.tag && post.tag.length){ %>
+  <div class="article-tags">
+    <% for (var i = 0; i < post.tag.length; i++) { %>
+      <% var tag = post.tag[i] %>
+      <a href="/tags/<%= tag %>" class="tag"><%= tag %></a>
+    <% } %>
+  </div>
+<% } %>

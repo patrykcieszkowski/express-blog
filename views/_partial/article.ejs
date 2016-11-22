@@ -1,0 +1,35 @@
+<article class="article>" itemscope itemprop="blogPost">
+  <header class="article-header">
+    <% include post/title %>
+  </header>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.post_page) { %>
+        <%- post.body %>
+      <% } else { %>
+        <% if (post.body_short) { %>
+          <%= post.body_short %>
+        <% } %>
+      <% } %>
+    </div>
+  </div>
+  <div class="article-meta">
+    <%- include post/tag  %>
+  </div>
+  <footer class="article-footer">
+    <%- include post/date %>
+    <span class="spacer">&middot;</span>
+    <% if (post.author){ %>
+      <% if (post.author.first_name && post.author.last_name) { %>
+        <div class="article-author"><%= post.author.first_name %> '<%= post.author.username %>' <%= post.author.last_name %></div>
+      <% } else {%>
+        <div class="article-author"><%= post.author.username %></div>
+      <% }%>
+    <% } %>
+
+    <% if (session.auth && session.auth.authenticated) { %>
+        <a href="/<%= post.seo_name %>/edit" style="float: right">Edit</a>
+    <% } %>
+
+  </footer>
+</article>

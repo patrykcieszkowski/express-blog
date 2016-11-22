@@ -1,0 +1,37 @@
+{
+  "name": "express-blog",
+  "version": "1.0.0",
+  "description": "simple blog script, express based.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrykcieszkowski/express-blog.git"
+  },
+  "keywords": [
+    "express",
+    "blog",
+    "simple",
+    "nodejs"
+  ],
+  "author": "Patryk Cieszkowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrykcieszkowski/express-blog/issues"
+  },
+  "homepage": "https://github.com/patrykcieszkowski/express-blog#readme",
+  "dependencies": {
+    "async": "^2.1.2",
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
+    "express-session": "^1.14.2",
+    "mongoose": "^4.6.7",
+    "node-bbcode": "^1.0.0"
+  }
+}
