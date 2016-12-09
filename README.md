@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/patrykcieszkowski/node-bbcode)
 [![paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z75DMS8AVZY5Y)
 
-Express-Blog is express and mongoose based blog script, made in MVC model. Based on easy-js(https://github.com/patrykcieszkowski/easy-js) starter-pack and node-bbcode(https://github.com/patrykcieszkowski/node-bbcode).
+Express-Blog is express and mongoose based blog script, made in MVC model. Based on easy-[js](https://github.com/patrykcieszkowski/easy-js) starter-pack and [node-bbcode](https://github.com/patrykcieszkowski/node-bbcode).
 
 # Contents
   - [Installation](#installation)
@@ -16,9 +16,9 @@ Express-Blog is express and mongoose based blog script, made in MVC model. Based
   ```
 
 # Config [^](#config)
-express-blog uses easy-js's(https://github.com/patrykcieszkowski/easy-js) routes and middleware config script.
+express-blog uses [easy-js's](https://github.com/patrykcieszkowski/easy-js) routes and middleware config script.
 
-  ### Routes
+### Routes
   List of routes provided by default on current version.
   ```
     // auth
@@ -39,7 +39,7 @@ express-blog uses easy-js's(https://github.com/patrykcieszkowski/easy-js) routes
     'post /post/new': 'PostController.post_new_article',
   ```
 
-  ### Middlewares
+### Middlewares
   ```
     /*
       gets assigned for specific group of URL path. (all types of requests)
@@ -96,7 +96,7 @@ express-blog uses easy-js's(https://github.com/patrykcieszkowski/easy-js) routes
   ```
 
 # Structure [^](#structure)
-express-blog uses easy-js's(https://github.com/patrykcieszkowski/easy-js) default file structure.
+express-blog uses [easy-js's](https://github.com/patrykcieszkowski/easy-js) default file structure.
   ```
     - api/
     -- controllers/
